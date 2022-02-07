@@ -121,7 +121,7 @@ def parse_args():
     parser.add_argument("--tensorboard", type=str, default=None)
     parser.add_argument("--teacher_ckpts", type=str, nargs='+', default=[])
     parser.add_argument("--teacher_emb_paths", type=str, nargs='+', default=[])
-    parser.add_argument("--num_teachers", type=int, default=2)
+    parser.add_argument("--num_teachers", type=int, default=1)
 
     args = parser.parse_args()
 

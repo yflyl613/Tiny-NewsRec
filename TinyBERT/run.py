@@ -5,7 +5,6 @@ from tqdm.auto import tqdm
 import torch.optim as optim
 import utils
 import os
-import logging
 from pathlib import Path
 import random
 from dataloader import DataLoaderTrain, DataLoaderTest
