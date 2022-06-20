@@ -289,7 +289,7 @@ class Model(torch.nn.Module):
             teacher_scores.append(score)
             teacher_losses.append(teacher_loss)
 
-        teacher_losses = -torch.stack(teacher_losses, dim=-1) * self.W
+        teacher_losses = -torch.stack(teacher_losses, dim=-1)
         teacher_weights = F.softmax(teacher_losses, dim=-1)
 
         teacher_scores = torch.stack(teacher_scores, dim=-1)
