@@ -3,7 +3,7 @@
 hvd_size=4
 
 mode=$1
-exp_name='PLM-NR-12(FT)'
+exp_name='PLM-NR-12(DP)'
 model_dir=../model_all/${exp_name}
 batch_size=32
 npratio=4
@@ -34,8 +34,8 @@ if [ ${mode} == train ]
 then
  user_log_mask=False
  filename_pat='behaviors_np4_*.tsv'
- use_pretrain_model=False
- pretrain_model_path='../FP_12_layer.pt'
+ use_pretrain_model=True
+ pretrain_model_path='../DP_12_layer.pt'
  mpirun -np ${hvd_size} -H localhost:${hvd_size} \
  python -u run.py --mode ${mode} --model_dir ${model_dir} --batch_size ${batch_size} --npratio ${npratio} \
  --train_data_dir ${train_data_dir} --test_data_dir ${test_data_dir} \
