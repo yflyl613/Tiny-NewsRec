@@ -1,6 +1,6 @@
 ## Tiny-NewsRec
 
-The source codes for our paper "Tiny-NewsRec: Effective and Efficient PLM-based News Recommendation".
+The source code and data for our paper "Tiny-NewsRec: Effective and Efficient PLM-based News Recommendation" in EMNLP 2022.
 
 ### Requirements
 
@@ -34,7 +34,7 @@ Our Tiny-NewsRec method contains the following 4 steps:
 
 - **Step 1**
 
-  Run the notebook `Domain-specific_Post-train.ipynb` to domain-specifically post-train the PLM-based news encoder. This will generate a checkpoint named as `DP_12_layer_{step}.pt` every `args.T` steps under `Tiny-NewsRec/`. Then you need to set the variable `ckpt_paths` as the paths to the last $M$ checkpoints and run the rest cells. For each checkpoint, it will generate two `.pkl` files named as  `teacher_title_emb_{idx}.pkl` and `teacher_body_emb_{idx}.pkl` which are used for the post-training stage knowledge distillation in our method.
+  Run the notebook `Domain-specific_Post-train.ipynb` to domain-specifically post-train the PLM-based news encoder. This will generate a checkpoint named `DP_12_layer_{step}.pt` every `args.T` steps under `Tiny-NewsRec/`. Then you need to set the variable `ckpt_paths` as the paths to the last $M$ checkpoints and run the rest cells. For each checkpoint, it will generate two `.pkl` files named `teacher_title_emb_{idx}.pkl` and `teacher_body_emb_{idx}.pkl` which are used for the post-training stage knowledge distillation in our method.
 
 - **Step 2**
 
