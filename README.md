@@ -46,7 +46,7 @@ The source code and data for our paper "Tiny-NewsRec: Effective and Efficient PL
 
   - **Step 3**
 
-    Use the script `Tiny-NewsRec/PLM-NR/demo.sh` to finetune the $M$ teacher models post-trained in Step 1 with the news recommendation task. Remember to set `use_pretrain_model` as `True` and set `pretrain_model_path` as the path to one of these teacher models respectively.
+    Use the script `Tiny-NewsRec/PLM-NR/demo.sh` to finetune the `M` teacher models post-trained in Step 1 with the news recommendation task. Remember to set `use_pretrain_model` as `True` and set `pretrain_model_path` as the path to one of these teacher models respectively.
 
 
   - **Step 4**
